@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData().copyWith(
         scaffoldBackgroundColor: Colors.white,
       ),
-      home:SplashScreen(),
+      home:AboutPage(),
     );
   }
 }

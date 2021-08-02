@@ -207,20 +207,29 @@ class _AboutPageState extends State<AboutPage> {
           next: const Icon(Icons.arrow_right),
           done: const Text("Done", style: TextStyle(fontWeight: FontWeight.w600)),
           showDoneButton: debug,
-          globalFooter: (!debug)?ElevatedButton(
-            onPressed: () {
-              Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => LoginScreen()
-                )
-              );
-            },
-            style: ElevatedButton.styleFrom(
-              primary: Colors.cyan,
-            ),
-            child: Text(
-              'Getting Started'
+          globalFooter: (!debug)?Container(
+            margin: EdgeInsets.only(bottom: 20),
+
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => LoginScreen()
+                  )
+                );
+              },
+              style: ElevatedButton.styleFrom(
+                primary: Color(0xFF033152),
+                padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20)
+              ),
+              child: Text(
+                'Getting Started',
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold
+                ),
+              ),
             ),
           ):Container(),
           isProgress: debug,
